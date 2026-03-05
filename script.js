@@ -11,8 +11,9 @@ const CONFIG = {
     REFERRAL_REWARDS: [
         { referrals: 3, name: 'Priority Access', icon: '🥉' },
         { referrals: 5, name: 'Skip the Line', icon: '🥈' },
-        { referrals: 10, name: 'Lifetime Free', icon: '🥇' },
-        { referrals: 25, name: 'Founder Status', icon: '💎' }
+        { referrals: 10, name: '50% Lifetime Discount', icon: '🥇' },
+        { referrals: 25, name: 'Founder Status', icon: '💎' },
+        { referrals: 100, name: '3 Months Free + Special Discounts', icon: '👑' }
     ],
     POINTS_PER_REFERRAL: 1
 };
@@ -603,6 +604,11 @@ function shareViaEmail() {
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+function shareOnWhatsApp() {
+    const text = `I just joined the waitlist for Synqless! 🚀\n\nUse my referral link to sign up and help me move up the list:\n${getReferralLink()}\n\nMy referral code: ${state.referralCode}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
 function copyReferralLink() {
     const input = document.getElementById('referral-link');
     if (!input) return;
@@ -641,5 +647,6 @@ window.showSignup = showSignup;
 window.shareOnTwitter = shareOnTwitter;
 window.shareOnLinkedIn = shareOnLinkedIn;
 window.shareViaEmail = shareViaEmail;
+window.shareOnWhatsApp = shareOnWhatsApp;
 window.copyReferralLink = copyReferralLink;
 window.logout = logout;
