@@ -193,6 +193,12 @@ function showDashboard() {
 }
 
 function determineInitialPage() {
+    // Don't override if already showing signup (from referral link)
+    const signupPage = document.getElementById('signup-page');
+    if (signupPage && signupPage.classList.contains('active')) {
+        return;
+    }
+    
     if (state.currentUser) {
         showDashboard();
     } else {
