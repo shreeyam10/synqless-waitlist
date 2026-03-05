@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synqless - Join the Waitlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Animated Background -->
+        <div class="bg-animation">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Synqless</span>
+            </div>
+            <div class="nav-stats">
+                <span class="stat-badge">
+                    <span class="stat-number" id="total-waitlist">2,847</span>
+                    <span class="stat-label">people waiting</span>
+                </span>
+            </div>
+        </nav>
+
+        <!-- Page 1: Hero/Landing Page -->
+        <div id="hero-page" class="page active">
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Early Access Opening Soon
+                </div>
+                
+                <h1 class="hero-title">
+                    Replace Meetings with
+                    <span class="gradient-text">Smart Async Threads</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Join thousands of teams who are revolutionizing how they communicate. 
+                    No more meeting fatigue. No more timezone headaches.
+                </p>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>Async-First</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span>AI-Powered</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔒</span>
+                        <span>Enterprise Ready</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <button class="cta-button primary" onclick="showSignup()">
+                        Get Early Access
+                        <span class="arrow">→</span>
+                    </button>
+                    <p class="cta-hint">Join the waitlist • Get 3 months free</p>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <div class="avatar-stack">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User" class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka" alt="User" class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zack" alt="User" class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria" alt="User" class="avatar">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="User" class="avatar">
+                        <div class="avatar more">+2.8k</div>
+                    </div>
+                    <p class="social-proof-text">
+                        <strong>2,847 people</strong> joined this week
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Signup Form -->
+        <div id="signup-page" class="page">
+            <div class="card signup-card">
+                <button class="back-btn" onclick="showHero()">
+                    <span>←</span> Back
+                </button>
+                
+                <div class="header">
+                    <div class="header-icon">🎯</div>
+                    <h1>Join the Waitlist</h1>
+                    <p class="subtitle">Secure your spot and unlock exclusive early access benefits</p>
+                </div>
+
+                <form id="waitlist-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">
+                                <span class="icon">👤</span> Full Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <span class="icon">📧</span> Work Email <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companySize">
+                            <span class="icon">🏢</span> Company Size <span class="required">*</span>
+                        </label>
+                        <select id="companySize" name="companySize" required>
+                            <option value="" disabled selected>Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="501-1000">501-1000 employees</option>
+                            <option value="1000+">1000+ employees</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">
+                            <span class="icon">💼</span> Company Name
+                        </label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Acme Inc.">
+                    </div>
+
+                    <div class="benefits-preview">
+                        <h3>✨ What you'll get:</h3>
+                        <ul>
+                            <li><span class="check">✓</span> 3 months free when we launch</li>
+                            <li><span class="check">✓</span> Exclusive beta access</li>
+                            <li><span class="check">✓</span> Priority customer support</li>
+                            <li><span class="check">✓</span> Shape the product roadmap</li>
+                        </ul>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Join Waitlist</span>
+                        <span class="btn-loading">Joining...</span>
+                        <span class="btn-icon">🚀</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Page 3: Dashboard (Thank You + Referral) -->
+        <div id="dashboard-page" class="page">
+            <div class="dashboard-container">
+                <!-- Success Card -->
+                <div class="card success-card">
+                    <div class="success-animation">
+                        <div class="checkmark-circle">
+                            <span class="checkmark">✓</span>
+                        </div>
+                    </div>
+                    
+                    <h1>You're In! 🎉</h1>
+                    <p class="success-message">
+                        You're <strong class="position-highlight">#<span id="user-position">--</span></strong> on the waitlist
+                    </p>
+                    
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span>Your Progress</span>
+                            <span class="referral-count"><span id="referral-count">0</span> referrals</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-hint">
+                            Refer <strong>5 friends</strong> to skip the line!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Referral Card -->
+                <div class="card referral-card">
+                    <h2>🔥 Unlock Early Access Faster</h2>
+                    <p class="referral-subtitle">
+                        Share your unique referral link and move up the waitlist. 
+                        Each signup = 1 spot higher!
+                    </p>
+
+                    <div class="referral-link-box">
+                        <input type="text" id="referral-link" readonly value="">
+                        <button class="copy-btn" onclick="copyReferralLink()">
+                            <span class="copy-icon">📋</span>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                    </div>
+
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" onclick="shareTwitter()">
+                            <span class="share-icon">𝕏</span>
+                            <span>Share on X</span>
+                        </button>
+                        <button class="share-btn linkedin" onclick="shareLinkedIn()">
+                            <span class="share-icon">in</span>
+                            <span>LinkedIn</span>
+                        </button>
+                        <button class="share-btn email" onclick="shareEmail()">
+                            <span class="share-icon">✉</span>
+                            <span>Email</span>
+                        </button>
+                        <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                            <span class="share-icon">📱</span>
+                            <span>WhatsApp</span>
+                        </button>
+                    </div>
+
+                    <div class="rewards-preview">
+                        <h3>🎁 Referral Rewards</h3>
+                        <div class="rewards-grid">
+                            <div class="reward-item" id="reward-1">
+                                <div class="reward-icon">🥉</div>
+                                <div class="reward-info">
+                                    <span class="reward-tier">3 referrals</span>
+                                    <span class="reward-name">Priority Access</span>
+                                </div>
+                                <div class="reward-status" id="status-1">Locked</div>
+                            </div>
+                            <div class="reward-item" id="reward-2">
+                                <div class="reward-icon">🥈</div>
+                                <div class="reward-info">
+                                    <span class="reward-tier">5 referrals</span>
+                                    <span class="reward-name">Skip the Line</span>
+                                </div>
+                                <div class="reward-status" id="status-2">Locked</div>
+                            </div>
+                            <div class="reward-item" id="reward-3">
+                                <div class="reward-icon">🥇</div>
+                                <div class="reward-info">
+                                    <span class="reward-tier">10 referrals</span>
+                                    <span class="reward-name">Lifetime Free</span>
+                                </div>
+                                <div class="reward-status" id="status-3">Locked</div>
+                            </div>
+                            <div class="reward-item" id="reward-4">
+                                <div class="reward-icon">💎</div>
+                                <div class="reward-info">
+                                    <span class="reward-tier">25 referrals</span>
+                                    <span class="reward-name">Founder Status</span>
+                                </div>
+                                <div class="reward-status" id="status-4">Locked</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Card -->
+                <div class="card leaderboard-card">
+                    <div class="leaderboard-header">
+                        <h2>🏆 Referral Leaderboard</h2>
+                        <div class="leaderboard-tabs">
+                            <button class="tab active" onclick="switchTab('weekly')">This Week</button>
+                            <button class="tab" onclick="switchTab('alltime')">All Time</button>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-list" id="leaderboard-list">
+                        <!-- Filled by JavaScript -->
+                    </div>
+
+                    <div class="your-rank">
+                        <div class="rank-divider">
+                            <span>Your Ranking</span>
+                        </div>
+                        <div class="rank-item you">
+                            <div class="rank-position" id="your-rank-pos">--</div>
+                            <div class="rank-avatar">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=You" alt="You">
+                            </div>
+                            <div class="rank-info">
+                                <span class="rank-name">You</span>
+                                <span class="rank-company" id="your-company">--</span>
+                            </div>
+                            <div class="rank-score">
+                                <span class="score-number" id="your-score">0</span>
+                                <span class="score-label">referrals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message">Copied to clipboard!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
